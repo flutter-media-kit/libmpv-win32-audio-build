@@ -6,7 +6,6 @@ ExternalProject_Add(libarchive
         xz
         zlib
         zstd
-        openssl
         libxml2
     GIT_REPOSITORY https://github.com/libarchive/libarchive.git
     SOURCE_DIR ${SOURCE_LOCATION}
@@ -21,7 +20,6 @@ ExternalProject_Add(libarchive
         -DBUILD_SHARED_LIBS=OFF
         -DENABLE_ZLIB=ON
         -DENABLE_ZSTD=ON
-        -DENABLE_OPENSSL=ON
         -DENABLE_BZip2=ON
         -DENABLE_ICONV=ON
         -DENABLE_LIBXML2=ON
