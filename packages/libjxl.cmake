@@ -5,7 +5,6 @@ ExternalProject_Add(libjxl
         libpng
         zlib
         libjpeg
-        brotli
         highway
     GIT_REPOSITORY https://github.com/libjxl/libjxl.git
     SOURCE_DIR ${SOURCE_LOCATION}
@@ -44,7 +43,6 @@ ExternalProject_Add(libjxl
         -DJPEGXL_ENABLE_AVX512_ZEN4=ON
         -DJPEGXL_ENABLE_AVX512_SPR=ON
         -DJPEGXL_FORCE_SYSTEM_LCMS2=ON
-        -DJPEGXL_FORCE_SYSTEM_BROTLI=ON
         -DJPEGXL_FORCE_SYSTEM_HWY=ON
         -DCMAKE_CXX_FLAGS='${CMAKE_CXX_FLAGS} ${libjxl_unaligned_vector}'
         -DCMAKE_C_FLAGS='${CMAKE_C_FLAGS}     ${libjxl_unaligned_vector}'
