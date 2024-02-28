@@ -15,9 +15,7 @@ ExternalProject_Add(ffmpeg
         vorbis
         libxml2
         libvpl
-        libjxl
         mbedtls
-        libplacebo
     GIT_REPOSITORY https://github.com/FFmpeg/FFmpeg.git
     SOURCE_DIR ${SOURCE_LOCATION}
     GIT_TAG ea3d24bbe3c58b171e55fe2151fc7ffaca3ab3d2
@@ -82,8 +80,8 @@ ExternalProject_Add(ffmpeg
 
         --enable-mbedtls
 
-        --enable-libjxl
-        --enable-libplacebo
+        --disable-libjxl
+        --disable-libplacebo
 
         --enable-avutil
         --enable-avcodec
